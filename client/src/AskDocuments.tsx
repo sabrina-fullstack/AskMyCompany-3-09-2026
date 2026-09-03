@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./AskDocuments.css";
 
+const API_URL = import.meta.env.VITE_API_URL ?? "http://localhost:3000";
+
 export default function AskDocuments() {
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
@@ -17,7 +19,7 @@ export default function AskDocuments() {
     setSources([]);
 
     try {
-      const response = await fetch("http://localhost:3000/api/rag/ask", {
+      const response = await fetch(`${API_URL}/api/rag/ask`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question }),
