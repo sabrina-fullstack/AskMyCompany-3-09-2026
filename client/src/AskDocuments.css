@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  background-color: #eef1f5;
+  font-family:
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: #1e2a4a;
+}
+
+.ask-container {
+  max-width: 620px;
+  margin: 70px auto;
+  padding: 44px 40px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(30, 42, 74, 0.08);
+}
+
+.ask-title {
+  margin: 0 0 10px;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: -0.3px;
+  color: #1e2a4a;
+}
+
+.ask-subtitle {
+  margin: 0 0 32px;
+  color: #7b869e;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.ask-input {
+  width: 100%;
+  min-height: 90px;
+  padding: 14px 16px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #1e2a4a;
+  border: 1.5px solid #2b4a9e;
+  border-radius: 6px;
+  box-sizing: border-box;
+  resize: vertical;
+  outline: none;
+}
+
+.ask-input::placeholder {
+  color: #a3adc2;
+}
+
+.ask-button {
+  margin-top: 20px;
+  padding: 12px 32px;
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  background-color: #2b4a9e;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.ask-button:hover:not(:disabled) {
+  background-color: #1e3a85;
+}
+
+.ask-button:disabled {
+  background-color: #b4c0da;
+  cursor: not-allowed;
+}
+
+.ask-error {
+  color: #c0392b;
+  margin-top: 14px;
+  font-size: 14px;
+}
+
+.ask-result {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid #e3e7ee;
+}
+
+.ask-result h3 {
+  margin: 0 0 12px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #7b869e;
+}
+
+.ask-result p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #1e2a4a;
+}
+
+.ask-sources {
+  margin-top: 28px;
+}
+
+.ask-sources h4 {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #7b869e;
+}
+
+.ask-sources ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ask-sources li {
+  padding: 12px 0;
+  font-size: 15px;
+  color: #2b4a9e;
+  border-bottom: 1px solid #eef1f5;
+}
+
+.ask-sources li:last-child {
+  border-bottom: none;
+}
