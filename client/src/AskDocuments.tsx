@@ -41,42 +41,54 @@ export default function AskDocuments() {
   }
 
   return (
-    <div className="ask-container">
-      <h1 className="ask-title">Ask My Company</h1>
-      <p className="ask-subtitle">
-        Ask about refunds, shipping, warranty, support hours and payments.
-      </p>
-
-      <textarea
-        className="ask-input"
-        value={question}
-        onChange={(e) => setQuestion(e.target.value)}
-        placeholder="Ask a question about the company..."
-      />
-
-      <div>
-        <button className="ask-button" onClick={handleAsk} disabled={loading}>
-          {loading ? "Thinking..." : "Ask"}
-        </button>
-      </div>
-
-      {error && <p className="ask-error">{error}</p>}
-
-      {answer && (
-        <div className="ask-result">
-          <h3>Answer</h3>
-          <p>{answer}</p>
-
-          <div className="ask-sources">
-            <h4>Sources</h4>
-            <ul>
-              {sources.map((source, index) => (
-                <li key={index}>{source}</li>
-              ))}
-            </ul>
-          </div>
+    <div className="ask-page">
+      <div className="ask-card">
+        <div className="chalk-board">
+          <span className="chalk-pin" aria-hidden="true"></span>
+          <h1 className="ask-title">Ask My School</h1>
+          <p className="ask-subtitle">
+            Ask about enrollment, tuition, attendance, homework and school
+            policies.
+          </p>
         </div>
-      )}
+
+        <div className="ask-body">
+          <textarea
+            className="ask-input"
+            value={question}
+            onChange={(e) => setQuestion(e.target.value)}
+            placeholder="Ask a question about the school..."
+          />
+
+          <div>
+            <button
+              className="ask-button"
+              onClick={handleAsk}
+              disabled={loading}
+            >
+              {loading ? "Thinking..." : "Ask"}
+            </button>
+          </div>
+
+          {error && <p className="ask-error">{error}</p>}
+
+          {answer && (
+            <div className="ask-result">
+              <h3>Answer</h3>
+              <p>{answer}</p>
+
+              <div className="ask-sources">
+                <h4>Sources</h4>
+                <ul>
+                  {sources.map((source, index) => (
+                    <li key={index}>{source}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
