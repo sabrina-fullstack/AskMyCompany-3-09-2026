@@ -5,8 +5,11 @@ const ai = new GoogleGenAI({
   apiKey: process.env.GEMINI_API_KEY,
 });
 
+const GENERATIVE_MODEL = process.env.GENERATIVE_MODEL as string;
+
 export async function askDocuments(question: string) {
-  const documents = await searchDocuments(question, 3);
+  const topK: number = 3;
+  const documents = await searchDocuments(question, topK);
 
   const context = documents
     .map(
@@ -23,7 +26,7 @@ ${doc.content}
     .join("\n");
 
   const response = await ai.models.generateContent({
-    model: "gemini-3.6-flash",
+    model: GENERATIVE_MODEL,
     contents: `
 Question:
 

@@ -4,12 +4,15 @@ const ai = new GoogleGenAI({
   apiKey: process.env.GEMINI_API_KEY,
 });
 
+const EMBEDDING_MODEL = process.env.EMBEDDING_MODEL as string;
+const EMBEDDING_DIMENSIONS = Number(process.env.EMBEDDING_DIMENSIONS);
+
 export async function createEmbedding(text: string): Promise<number[]> {
   const response = await ai.models.embedContent({
-    model: "gemini-embedding-2",
+    model: EMBEDDING_MODEL,
     contents: text,
     config: {
-      outputDimensionality: 768,
+      outputDimensionality: EMBEDDING_DIMENSIONS,
     },
   });
 

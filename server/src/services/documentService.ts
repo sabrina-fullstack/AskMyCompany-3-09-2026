@@ -18,7 +18,11 @@ export async function addDocument(title: string, content: string) {
   return result[0];
 }
 
-export async function searchDocuments(question: string, limit: number = 3) {
+export async function searchDocuments(
+  question: string,
+  limit: number = 3,
+  threshold: number = 0.7,
+) {
   const embedding = await createEmbedding(question);
   const vector = toVectorString(embedding);
 
@@ -29,6 +33,7 @@ export async function searchDocuments(question: string, limit: number = 3) {
       content,
       embedding <=> ${vector}::vector AS distance
     FROM documents
+    WHERE embedding <=> ${vector}::vector < ${threshold}
     ORDER BY embedding <=> ${vector}::vector
     LIMIT ${limit}
   `;

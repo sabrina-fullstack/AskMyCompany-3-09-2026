@@ -3,52 +3,54 @@ import { addDocument } from "./services/documentService";
 
 const documents = [
   {
-    title: "Refund Policy",
+    title: "Enrollment",
     content:
-      "Customers may return unopened products within 14 days of purchase.",
+      "New student enrollment opens every year in April and closes at the end of June. Parents must submit a completed application form, a copy of the child's birth certificate, and proof of address. Enrollment is confirmed only after payment of the registration fee.",
   },
   {
-    title: "Shipping Policy",
-    content: "Orders are normally delivered within 3-5 business days.",
-  },
-  {
-    title: "Support Hours",
+    title: "Tuition Fees",
     content:
-      "Customer support is available Sunday through Thursday from 09:00 to 17:00.",
+      "Annual tuition fees are due in three installments: September, January, and April. A 5 percent discount is offered for full payment made before August 15. Families with more than one child enrolled receive a 10 percent discount on the second child's tuition.",
   },
   {
-    title: "Warranty",
+    title: "School Hours",
     content:
-      "Electronic products include a one year warranty from the purchase date.",
+      "Classes run from Sunday to Thursday, 08:00 to 14:30. An after-school program is available until 16:30 for an additional fee. The school office is open from 07:30 to 15:30 for administrative matters.",
   },
   {
-    title: "Company Policy",
-    content: "Employees receive 22 vacation days per year.",
-  },
-  {
-    title: "Office Hours",
+    title: "Attendance Policy",
     content:
-      "Our offices are open Sunday through Thursday from 08:00 to 18:00. The offices are closed on Friday, Saturday, and public holidays.",
+      "Students are expected to attend school every day unless ill. Parents must notify the school office before 08:30 in case of absence. After three consecutive unexplained absences, the homeroom teacher will contact the family directly.",
   },
   {
-    title: "Payment Policy",
+    title: "Grading System",
     content:
-      "We accept credit cards, debit cards, and PayPal. Payments are processed securely and card details are never stored on our servers.",
+      "Students are graded on a scale from 0 to 100 in each subject. Report cards are issued at the end of each semester. A grade below 60 is considered failing and may require additional tutoring sessions.",
   },
   {
-    title: "Delivery Areas",
+    title: "Homework Policy",
     content:
-      "We currently deliver to all regions within the country. International shipping is available to select countries in Europe and North America.",
+      "Homework is assigned daily for core subjects such as math and language. Elementary students should spend no more than 45 minutes per day on homework, while middle school students may spend up to 90 minutes. Homework is reviewed the following school day.",
   },
   {
-    title: "Cancellation Policy",
+    title: "Uniform Policy",
     content:
-      "Orders can be cancelled free of charge within 1 hour of being placed. After that, cancellation is only possible if the order has not yet shipped.",
+      "All students are required to wear the official school uniform during school hours. The uniform consists of a navy polo shirt with the school logo and grey pants or skirt. Sports uniforms are required only on physical education days.",
   },
   {
-    title: "Technical Support",
+    title: "Extracurricular Activities",
     content:
-      "Technical support is available by email and live chat. Response time is typically within 24 hours on business days.",
+      "The school offers extracurricular activities including chess club, robotics, choir, and basketball. Activities take place after school hours, twice a week, and require a separate registration form. Some activities may have an additional participation fee.",
+  },
+  {
+    title: "Parent-Teacher Meetings",
+    content:
+      "Parent-teacher meetings are held twice a year, once per semester. Additional meetings can be scheduled upon request by contacting the homeroom teacher directly. Meeting slots are typically 15 minutes long and must be booked in advance.",
+  },
+  {
+    title: "Discipline Policy",
+    content:
+      "Students are expected to follow the school code of conduct at all times. Minor infractions result in a verbal warning from the teacher, while repeated or serious infractions are referred to the school principal. Parents are informed of any disciplinary action taken.",
   },
 ];
 
